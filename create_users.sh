@@ -57,12 +57,11 @@ for user in "$@"; do
     echo "Välkommen $user" > /home/"$user"/welcome.txt
 
     # Skriver in i welcome.txt också en lista på alla redan skapade användare på raden under "Välkommen <användare>"
-    cut -d: -f1 /etc/passwd >> /home/"$user"/welcome.txt
-    # cut = linux commando som används för att plocka ut delar av en text
-    # -d: = anger vilket fältavgränsningstecken som ska anvädas,
-    # där : betyder cut och kommerseparera varje /etc/passwd vid konon ( : ).
-    # -f1 betyder att den tar ifrån första fältet. Root = fält 1, x = fält 2, 0 = fält 3 osv.
-    # >> = betyder att vi skriver in under det som redan finns i filen, så att vi inte kan råka skriva över något.
+    # testar att loopa in användarna.
+    for u in "$@"; do
+        echo "$u" >> /home/"$user"/welcome.txt
+    done
+    
 
 
 
