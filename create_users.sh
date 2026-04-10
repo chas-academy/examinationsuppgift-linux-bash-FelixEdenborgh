@@ -50,6 +50,9 @@ for user in "$@"; do
     chmod 700 /home/"$user"/Downloads
     chmod 700 /home/"$user"/Work
 
+    # tar bort om det skapades någon welcome.txt per automatik
+    rm -f /home/"$user"/welcome.txt
+
     # Ett välkommst meddelande. welcome.txt - med ett personligt meddelande i formatet: Välkommen <användare>
     echo "Välkommen $user" > /home/"$user"/welcome.txt
 
