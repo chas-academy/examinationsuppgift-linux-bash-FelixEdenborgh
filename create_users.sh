@@ -1,5 +1,6 @@
-# shebang: "#!/bin/bash" berättar för linux att detta skriptet är med bash-token. Så att linux förstår hur den ska köras.
 #!/bin/bash
+# shebang: "#!/bin/bash" berättar för linux att detta skriptet är med bash-token. Så att linux förstår hur den ska köras.
+
 
 
 # Skriptet ska kolla så att den som kör den är root annars avsluta med ett meddelande
@@ -50,7 +51,7 @@ for user in "$@"; do
     chmod 700 /home/"$user"/Work
 
     # Ett välkommst meddelande. welcome.txt - med ett personligt meddelande i formatet: Välkommen <användare>
-    echo "Välkommen $user"> /home/"$user"/welcome.txt
+    echo "Välkommen $user" > /home/"$user"/welcome.txt
 
     # Skriver in i welcome.txt också en lista på alla redan skapade användare på raden under "Välkommen <användare>"
     cut -d: -f1 /etc/passwd >> /home/"$user"/welcome.txt
