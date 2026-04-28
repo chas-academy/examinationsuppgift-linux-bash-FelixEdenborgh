@@ -67,3 +67,6 @@ for user in "$@"; do
 
 done
 
+# Då videon som jag la in här inte får med sig sitt ljud så skickar jag med länkarna till vart de ligger på youtube.
+# Koden.mp4: https://www.youtube.com/watch?v=334UISByq5I
+# Vps.mp4: https://www.youtube.com/watch?v=5McQ0Qw1y8I
